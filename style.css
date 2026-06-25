@@ -2,23 +2,16 @@ body {
     margin-top: 0;
     margin-left: 0;
     display: grid;
-    grid-template-areas: 
-        "header1 header2 header3"
-        "suggest suggest suggest"
-        "sidebar main main"
-        "sidebar text text"
-        "sidebar feature cost"
-        "sidebar mail mail"
-        "footer footer footer";
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 3fr 6fr 1fr;
+    grid-template-rows: auto;
     background-color: gray;
     width: 100%;
     height: 600px;
     border: 1px black solid;
-    
-    
+
+
 }
+
 /* 
 header{
     border: 1px solid black;
@@ -34,25 +27,24 @@ header{
     align-content: center;
     margin: 0;
     border: 1px black solid;
-    padding-left: 10px;;
+    padding-left: 10px;
+    ;
 }
 
 .top-nav2 {
     grid-column: 2;
     border: 1px black solid;
     align-content: center;
-    /* display: flex; */
     margin: 0;
     padding-left: 10px;
-    
+
 }
 
 .top-nav3 {
+    grid-column: 3;
     border: 1px black solid;
-    grid-area: header3;
     margin: 0;
     align-content: center;
-    /* display: flex; */    
     padding-left: 10px;
 }
 
@@ -75,7 +67,7 @@ header{
     grid-row: 3;
     border: 1px black solid;
     align-content: center;
-    padding-left:10px;
+    padding-left: 10px;
 }
 
 .main li {
@@ -87,12 +79,13 @@ header{
     grid-row: 4;
     align-content: center;
     padding: 10px 0;
-    padding-left:10px;
+    padding-left: 10px;
+    border: 1px black solid;
 
 }
 
 .feature {
-    padding-left:10px;
+    padding-left: 10px;
     padding-bottom: 10px;
     grid-column: 2;
     grid-row: 5;
@@ -108,7 +101,7 @@ header{
 }
 
 .cost {
-    padding-left:10px;
+    padding-left: 10px;
     grid-column: 3;
     grid-row: 5;
     border: 1px black solid;
@@ -116,13 +109,75 @@ header{
 
 .price {
     text-align: center;
-    justify-content: center;
+    align-content: center;
+
+
 }
 
 .mail {
     grid-column: 2 / -1;
     grid-row: 6;
     text-align: center;
-    justify-content: center;
-    padding: 10px 0;
+    align-content: center;
+    border: 1px black solid;
+}
+
+@media only screen and (max-width:768px) {
+    body {
+        font-size: 1.5rem;
+        display: grid;
+        grid-template-columns: auto;
+        border: none;
+    }
+
+
+
+    .suggest {
+        grid-column: 1;
+        grid-row: 2;
+        align-content: center;
+        padding-left: 10px;
+    }
+
+
+    .main {
+        grid-column: 1;
+        grid-row: 3;
+        border: 1px black solid;
+        align-content: center;
+        padding-left: 10px;
+    }
+
+    .text {
+        grid-column: 1;
+        grid-row: 4;
+        align-content: center;
+        padding: 10px 0;
+        padding-left: 10px;
+        border: 1px black solid;
+    }
+
+    .feature {
+        padding-left: 10px;
+        padding-bottom: 10px;
+        grid-column: 1;
+        grid-row: 5;
+        border: 1px black solid;
+    }
+
+    .cost {
+        padding-left: 10px;
+        grid-column: 1;
+        grid-row: 6;
+        border: 1px black solid;
+    }
+
+    .mail {
+        grid-column: 1;
+        grid-row: 7;
+        text-align: center;
+        justify-content: center;
+        padding: 10px 10px;
+    }
+
 }
