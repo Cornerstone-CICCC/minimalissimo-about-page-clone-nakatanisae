@@ -1,3 +1,4 @@
+
 li {
     list-style: none;
 }
@@ -19,7 +20,7 @@ body {
     background-color: #FFFFFF;
     border: 1px black solid;
     font-size: 16px;
-    font-family: "GeistSans", "GeistSans Fallback"
+    font-family: 'Geist Sans', sans-serif;
     
 }
 
