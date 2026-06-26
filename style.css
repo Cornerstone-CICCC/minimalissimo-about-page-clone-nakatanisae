@@ -1,4 +1,3 @@
-
 li {
     list-style: none;
 }
@@ -8,51 +7,63 @@ a {
     color: black;
 }
 
-a:hover{
+a:hover {
     color: gray;
 }
 
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
-    background-color: #FFFFFF;
-    border: 1px black solid;
+    background-color: #F7F7F7;
     font-size: 16px;
     font-family: 'Geist Sans', sans-serif;
-    
+
+}
+
+.bg-white {
+    grid-column: 1 / -1;
+    grid-row: 1 / 9;
+    background-color: #ffff;
+}
+
+
+header {
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .header {
-    grid-column: 1;
-    grid-row: 1;
     display: flex;
-    border: 1px black solid;
+    
     padding: 0px 24px;
     margin-bottom: 24px;
+    display: flex;
+
 }
 
 .header a {
-    color: gray; 
+    color: gray;
 }
 
 .header a:hover {
-    color: black; 
+    color: black;
 }
 
 .intro {
     grid-column: 1 / 4;
     grid-row: 2;
     font-size: 24px;
-    border: 1px black solid;
+    
     padding: 40px 24px 0px 24px;
 }
 
 .explain {
     grid-column: 1 / 4;
     grid-row: 3;
-    border: 1px black solid;
+    
     padding: 24px;
     margin-bottom: 64px;
 }
@@ -62,134 +73,186 @@ body {
     grid-column: 1;
     grid-row: 4;
     padding: 0 24px;
-    border: 1px black solid;
+    
 }
 
-.icon{
+.icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: solid 3px white;
 }
 
-.icon:not(:first-child){
+.icon:not(:first-child) {
     margin-left: -10px;
 }
 
-.team, .team-members, .alumni, .alumni-members,.contact, .mailAddress{
+.team,
+.team-members,
+.alumni,
+.alumni-members,
+.contact,
+.mailAddress {
     padding: 0 24px;
 }
 
 .team {
     grid-column: 2;
     grid-row: 4;
-    border: 1px black solid;
+    
 }
 
 .team-members {
     grid-column: 3;
     grid-row: 4;
-    border: 1px black solid;
+    margin-bottom: 10px;
 }
 
-.team-members, .alumni-members, .mailAddress li {
-    border: 1px black solid;
+.team-members li, .alumni-members li {
+    margin-bottom: 5px;
 }
+
 
 .alumni {
     grid-column: 2;
     grid-row: 5;
-    border: 1px black solid;
+    
+    
 }
 
 .alumni-members {
     grid-column: 3;
     grid-row: 5;
-    border: 1px black solid;
+    margin-bottom: 10px;
+    
 }
 
 .contact {
     grid-column: 2;
     grid-row: 6;
-    border: 1px black solid;
+    
 }
 
 .mailAddress {
     grid-column: 3;
     grid-row: 6;
-    border: 1px black solid;
+    
 }
 
 .space {
     grid-column: 1 / -1;
     grid-row: 8;
     height: 100px;
-    border: 1px black solid;
-
-}
-
-.letter-intro {
-    background-color: #F7F7F7;
     
+
 }
+
+.side-space {
+    grid-column: 1/ 4;
+    grid-row: 9 / 13;
+}
+
+
 
 .lettes-intro {
-    grid-column: 3 / -1;
+    grid-column: 4 / -1;
     grid-row: 9;
-    border: 1px black solid;
-    background-color: #F7F7F7;
-    
+    padding-right: 24px;
+
+
 }
 
-.textName{
+.textName {
     font-weight: 400;
+
+}
+
+input {
+    background-color: #EFEFEF;
+    border: solid 1px oklch(0.922 0 0);
+    border-radius: 4px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    width: 210px;
+    height: 40px;
     
 }
 
 .textName input {
-    background-color: #F7F7F7;
-}
-
-.name {
-    grid-column: 3;
-    grid-row: 10;
+    background-color: #EFEFEF;
     
 }
 
-.mail {
+.name {
     grid-column: 4;
     grid-row: 10;
+
 }
 
-.btn {
+.mail {
     grid-column: 5;
     grid-row: 10;
 }
 
-.btn:hover{
+.btn {
+    grid-column: 6;
+    grid-row: 10;
+    background-color: #EFEFEF;
+    border: solid 1px oklch(0.922 0 0);
+    border-radius: 4px;
+    padding: 0 16px;
+    box-sizing: border-box;
+      width: 210px;
+    height: 40px;
+}
+
+.btn:hover {
     background-color: black;
-    color:white;
+    color: white;
 }
 
 .agreement {
-    grid-column: 3 / -1;
+    grid-column: 4 / -1;
     grid-row: 11;
     background-color: #F7F7F7;
+    font-size: 12px;
+    color: #999999;
+    padding-right: 24px;
 }
 
 .bottom-sidebar-left {
-    grid-column: 3;
+    grid-column: 4;
     grid-row: 12;
     background-color: #F7F7F7;
+    margin-top: 124px;
+    padding: 24px 0px 96px 0px;
+
 }
 
 .bottom-sidebar-right {
-    grid-column: 4;
+    grid-column: 5;
     grid-row: 12;
     display: flex;
     flex-direction: column;
-    justify-content: right;
+    justify-self: end;
     background-color: #F7F7F7;
+    margin-top: 124px;
+    padding: 24px 0px 96px 0px;
+}
+
+.bottom-sidebar-left a,
+.bottom-sidebar-right a {
+    color: #999999;
+}
+
+.bottom-sidebar-left li,
+.bottom-sidebar-right li {
+    margin-bottom: 8px;
+}
+
+.bottom-sidebar-left a:hover,
+.bottom-sidebar-right a:hover {
+    color: black;
 }
 
 .footer {
@@ -199,4 +262,38 @@ body {
     justify-content: space-between;
     text-align: center;
     background-color: #F7F7F7;
+    color: #999999;
+    padding-right: 24px;
+}
+
+.footer a {
+    color: #999999;
+    padding: 24px 0px 96px 0px;
+    margin-left: 5px;
+}
+
+.footer a:hover {
+    color: black;
+}
+
+.searchBar {
+    box-sizing: border-box;
+    width: 405px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: white;
+    border: solid 1px oklch(0.922 0 0);
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.searchBar img {
+    width: 30px;
+    height: 30px;
 }
