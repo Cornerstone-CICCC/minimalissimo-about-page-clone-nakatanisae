@@ -111,12 +111,17 @@ header {
     margin-bottom: 5px;
 }
 
+.team-members li:hover,
+.alumni-members li:hover {
+    font-size: 18px;
+    transform: scale(1.2);
+}
+
+
 
 .alumni {
     grid-column: 2;
     grid-row: 5;
-
-
 }
 
 .alumni-members {
@@ -149,18 +154,14 @@ header {
     grid-row: 9 / 13;
 }
 
-
-
 .lettes-intro {
     grid-column: 4 / -1;
     grid-row: 9;
     padding-right: 24px;
-
 }
 
 .textName {
     font-weight: 400;
-
 }
 
 input {
